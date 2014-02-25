@@ -337,6 +337,3 @@ document.addEventListener(
   'DOMContentLoaded',
   -> console.log('__DOMContentLoaded')
 )
-
-window.confirm = (message) -> true
-window.prompt  = (message, _default) -> _default or null

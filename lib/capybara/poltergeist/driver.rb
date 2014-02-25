@@ -244,6 +244,26 @@ module Capybara::Poltergeist
       add_header('Authorization', "Basic #{credentials}")
     end
 
+    def js_alert_messages
+      browser.js_alert_messages
+    end
+
+    def js_confirm_messages
+      browser.js_confirm_messages
+    end
+
+    def js_confirm_set_responses(*responses)
+      browser.js_confirm_responses = responses
+    end
+
+    def js_prompt_messages
+      browser.js_prompt_messages
+    end
+
+    def js_prompt_set_responses(*responses)
+      browser.js_prompt_responses = responses
+    end
+
     def debug
       if @options[:inspector]
         inspector.open
